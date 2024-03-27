@@ -1,5 +1,14 @@
+import Main from "./components/Main/Main";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.scss";
+
 const App = () => {
-    return <h1>App</h1>;
+    return (
+        <div className="app-container">
+            <Navbar />
+            <Main />
+        </div>
+    );
 };
 
 export default App;
