@@ -1,0 +1,50 @@
+@use "../../styles/variables" as *;
+
+.search-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+    .search-box__label {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .search-box__input {
+        margin: 1.25rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 2px $color-tertiary solid;
+        border-radius: 1rem;
+        color: $color-black;
+        width: 100%;
+
+        &:focus {
+            border: 2px $color-primary solid;
+            outline: none;
+        }
+    }
+}
+
+// @media screen and (min-width: 768px) {
+//     .search-box {
+//         .search-box__label {
+//             font-size: 1.25rem;
+//         }
+//         .search-box__input {
+//             width: 50%;
+//             padding: 0.625rem;
+//             font-size: 1.1rem;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 1024px) {
+//     .search-box {
+//         .search-box__input {
+//             width: 35%;
+//         }
+//     }
+// }

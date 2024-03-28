@@ -3,9 +3,13 @@
 .navbar-container {
     width: 100%;
     padding: 20px;
-    // background-color: tomato;
-    background-color: $color-primary;
-    color: $color-light-gray;
+    background-color: $color-secondary;
+    // color: $color-light-gray;
+    color: $color-black;
+
+    .navbar-logo {
+        font-size: 28px;
+    }
 }
 
 @media screen and (min-width: 768px) {
