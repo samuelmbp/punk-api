@@ -3,15 +3,15 @@
 .navbar-container {
     width: 100%;
     padding: 20px;
-    background-color: tomato;
-    // background-color: $color-primary;
-    // color: $color-white;
-    // height: 100vh;
+    // background-color: tomato;
+    background-color: $color-primary;
+    color: $color-light-gray;
 }
 
 @media screen and (min-width: 768px) {
     .navbar-container {
         width: 20%;
-        height: 200vh;
+        // TODO: TBC...
+        height: 400vh;
     }
 }
