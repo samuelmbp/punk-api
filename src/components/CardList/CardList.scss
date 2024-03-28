@@ -1,36 +1,66 @@
 @use "../../styles/variables" as *;
 
-.card-list {
+.cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    &__item {
-        background-color: $color-primary;
+    .card {
+        // background-color: $color-primary;
         color: $color-light-gray;
-        padding: 12px;
+        padding: 10px;
         border-radius: 12px;
 
-        &-image {
+        &__image {
             width: 100%;
             height: 350px;
             object-fit: contain;
-            margin-bottom: 12px;
         }
 
-        &-name {
+        &__details {
+            background-color: $color-primary;
+            height: 250px;
+            padding: 10px;
+            border-radius: 12px;
+            width: 280px;
+        }
+
+        &__title {
             color: $color-secondary;
         }
 
-        &-tagline {
+        &__tagline {
             color: $color-tertiary;
             font-style: italic;
             border-bottom: 2px solid $color-secondary;
         }
-        &-description {
+        &__description {
             margin-top: 12px;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .cards {
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(3, 30vw);
+        // gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+            // width: 350px;
+            height: 600px;
+
+            &-info {
+                padding: 10px;
+                border-radius: 12px;
+                width: 400px;
+                height: 280px;
+            }
         }
     }
 }
