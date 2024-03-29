@@ -354,7 +354,7 @@ const beers: Beer[] = [
         contributed_by: "Sam Mason <samjbmason>",
     },
     {
-        id: 4,
+    id: 4,
         name: "Pilsen Lager",
         tagline: "Unleash the Yeast Series.",
         first_brewed: "09/2013",
