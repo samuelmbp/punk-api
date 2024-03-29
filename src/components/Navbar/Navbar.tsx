@@ -1,7 +1,8 @@
 import { FormEventHandler } from "react";
-import "./Navbar.scss";
-import SearchBox from "../SearchBox/SearchBox";
 import { FilterOptions } from "../../types/types";
+import Checkbox from "../Checkbox/Checkbox";
+import SearchBox from "../SearchBox/SearchBox";
+import "./Navbar.scss";
 
 type NavbarProps = {
     searchTerm: string;
@@ -38,32 +39,21 @@ const Navbar = ({
                 handleInput={handleInput}
             />
             <div className="checkbox-container">
-                <label>
-                    ABV &gt; 6
-                    <input
-                        type="checkbox"
-                        checked={filterOptions.abv}
-                        onChange={() => handleCheckboxChange("abv")}
-                    />
-                </label>
-                <label>
-                    Brewed before 2010
-                    <input
-                        type="checkbox"
-                        checked={filterOptions.brewedBefore2010}
-                        onChange={() =>
-                            handleCheckboxChange("brewedBefore2010")
-                        }
-                    />
-                </label>
-                <label>
-                    PH &lt; 4
-                    <input
-                        type="checkbox"
-                        checked={filterOptions.ph}
-                        onChange={() => handleCheckboxChange("ph")}
-                    />
-                </label>
+                <Checkbox
+                    label="ABV > 6"
+                    checked={filterOptions.abv}
+                    onChange={() => handleCheckboxChange("abv")}
+                />
+                <Checkbox
+                    label="Brewed Before 2010"
+                    checked={filterOptions.brewedBefore2010}
+                    onChange={() => handleCheckboxChange("brewedBefore2010")}
+                />
+                <Checkbox
+                    label="PH < 4"
+                    checked={filterOptions.ph}
+                    onChange={() => handleCheckboxChange("ph")}
+                />
             </div>
         </nav>
     );

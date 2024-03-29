@@ -1,7 +1,7 @@
+import { useState } from "react";
+import "./App.scss";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
-import "./App.scss";
-import { useState } from "react";
 import { FilterOptions } from "./types/types";
 
 const App = () => {

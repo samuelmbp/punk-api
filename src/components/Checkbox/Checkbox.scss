@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.checkbox-label {
+    font-size: 18px;
+
+    .checkbox-input {
+        margin-left: 10px;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        appearance: none;
+        border: 2px solid $color-tertiary;
+        border-radius: 12px;
+        background-color: $color-white;
+    }
+
+    .checkbox-input:checked {
+        background-color: $color-primary;
+        border-color: $color-tertiary;
+    }
+
+    .checkbox-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $color-tertiary;
+    }
+}
