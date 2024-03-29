@@ -34,7 +34,7 @@ const Navbar = ({
         <nav className="navbar-container">
             <h1 className="navbar-logo">Punk API</h1>
             <SearchBox
-                label="Search Beer by Name"
+                label="Search 🍺 by Name"
                 searchTerm={searchTerm}
                 handleInput={handleInput}
             />

@@ -11,7 +11,6 @@ const CardList = ({ beers }: CardListProps) => {
         <section className="cards">
             {beers &&
                 beers.map((beer) => (
-                    // TODO: Create a CardItem Component
                     <Card
                         key={beer.id}
                         image={beer.image_url}
