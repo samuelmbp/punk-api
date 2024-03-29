@@ -1,12 +1,7 @@
 import { FormEventHandler } from "react";
 import "./Navbar.scss";
 import SearchBox from "../SearchBox/SearchBox";
-
-type FilterOptions = {
-    abv: boolean;
-    brewedBefore2010: boolean;
-    ph: boolean;
-};
+import { FilterOptions } from "../../types/types";
 
 type NavbarProps = {
     searchTerm: string;

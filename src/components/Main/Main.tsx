@@ -1,15 +1,11 @@
 import beers from "../../data/beers";
+import { FilterOptions } from "../../types/types";
 import CardList from "../CardList/CardList";
 import "./Main.scss";
 
 type MainProps = {
     searchTerm: string;
-    // refactor; import type FilterOptions
-    filterOptions: {
-        abv: boolean;
-        brewedBefore2010: boolean;
-        ph: boolean;
-    };
+    filterOptions: FilterOptions;
 };
 
 const Main = ({ searchTerm, filterOptions }: MainProps) => {

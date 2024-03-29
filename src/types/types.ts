@@ -22,6 +22,12 @@ export type Beer = {
     contributed_by: string;
 };
 
+export type FilterOptions = {
+    abv: boolean;
+    brewedBefore2010: boolean;
+    ph: boolean;
+};
+
 type Ingredients = {
     malt: Malt[];
     hops: Hop[];

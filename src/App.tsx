@@ -2,12 +2,7 @@ import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.scss";
 import { useState } from "react";
-
-type FilterOptions = {
-    abv: boolean;
-    brewedBefore2010: boolean;
-    ph: boolean;
-};
+import { FilterOptions } from "./types/types";
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState<string>("");
