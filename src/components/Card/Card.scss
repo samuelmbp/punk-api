@@ -16,12 +16,12 @@
         height: 350px;
         object-fit: contain;
         border-radius: 12px;
-        padding: 12px;
+        padding: 50px;
     }
 
     &__details {
         background-color: $color-primary;
-        height: 250px;
+        height: 350px;
         padding: 10px;
         border-radius: 12px;
         width: 280px;
@@ -48,12 +48,14 @@
 @media screen and (min-width: $tablet-breakpoint) {
     .card {
         height: 600px;
+        margin: 35px 0;
+
+        // &__image {
+        //     width: 300px;
+        // }
 
         &__details {
-            // padding: 10px;
-            // border-radius: 12px;
             width: 300px;
-            // height: 280px;
         }
     }
 }

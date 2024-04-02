@@ -2,7 +2,7 @@ import { getFirstSentence } from "../../helpers/getFirstSentence";
 import "./Card.scss";
 
 type CardProps = {
-    image: string;
+    image?: string;
     name: string;
     tagline: string;
     description: string;

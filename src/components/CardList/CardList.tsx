@@ -7,10 +7,12 @@ type CardListProps = {
 };
 
 const CardList = ({ beers }: CardListProps) => {
+    const beersWithImages = beers.filter((beer) => beer.image_url);
+
     return (
         <section className="cards">
-            {beers &&
-                beers.map((beer) => (
+            {beersWithImages &&
+                beersWithImages.map((beer) => (
                     <Card
                         key={beer.id}
                         image={beer.image_url}
