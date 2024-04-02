@@ -5,14 +5,15 @@
     padding: 20px;
     color: $color-light-gray;
 
-    background-image: url("../../assets/hero.png");
+    background-image: url("../../assets/hero-nav.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     .navbar-logo {
-        font-size: 28px;
+        font-size: 30px;
         text-align: center;
+        font-family: "Edu NSW ACT Foundation", cursive;
     }
 
     .checkbox-container {
@@ -25,10 +26,19 @@
 
 @media screen and (min-width: 768px) {
     .navbar-container {
+        width: 40%;
+        background-image: url("../../assets/hero-wide.png");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar-container {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar-container {
         width: 20%;
-        // TODO: TBC...
-        // height: 400vh;
-        // height: 150vh;
-        background-image: url("../../assets/hero1.png");
     }
 }

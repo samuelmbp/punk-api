@@ -31,6 +31,16 @@ const Main = ({ searchTerm, filterOptions }: MainProps) => {
     });
     return (
         <main className="main-container">
+            <div className="intro-text">
+                <h2>Welcome to the BrewDog’s Beer Collection!</h2>
+                <p>
+                    Explore the{" "}
+                    <span className="intro-text__span">
+                        wide range of craft beers
+                    </span>{" "}
+                    from around the world.
+                </p>
+            </div>
             <CardList beers={filteredBeers} />
         </main>
     );

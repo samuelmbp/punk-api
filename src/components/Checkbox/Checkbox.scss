@@ -2,6 +2,7 @@
 
 .checkbox-label {
     font-size: 18px;
+    color: "";
 
     .checkbox-input {
         margin-left: 10px;
@@ -15,12 +16,12 @@
     }
 
     .checkbox-input:checked {
-        background-color: $color-primary;
+        background-color: $color-secondary;
         border-color: $color-tertiary;
     }
 
     .checkbox-input:focus {
         outline: none;
-        box-shadow: 0 0 0 2px $color-tertiary;
+        box-shadow: 0 0 0 1px $color-tertiary;
     }
 }

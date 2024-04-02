@@ -1,10 +1,15 @@
 @use "../../styles/variables" as *;
 
 .card {
-    // background-color: $color-primary;
     color: $color-light-gray;
     padding: 10px;
     border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        // transform: translate(10px);
+        transform: scale(1.05);
+    }
 
     &__image {
         width: 100%;
@@ -20,17 +25,20 @@
         padding: 10px;
         border-radius: 12px;
         width: 280px;
-        box-shadow: 4px 4px 4px rgba($color: $color-primary, $alpha: 0.6);
+        box-shadow: 4px 4px 4px rgba($color: $color-black, $alpha: 0.6);
     }
 
     &__title {
         color: $color-secondary;
+        font-family: "Edu NSW ACT Foundation", cursive;
     }
 
     &__tagline {
         color: $color-tertiary;
         font-style: italic;
-        border-bottom: 2px solid $color-secondary;
+        border-bottom: 3px solid $color-secondary;
+        // font-family: "Edu NSW ACT Foundation", cursive;
+        // font-size: 20px;
     }
     &__description {
         margin-top: 12px;

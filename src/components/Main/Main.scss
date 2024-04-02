@@ -2,14 +2,47 @@
 
 .main-container {
     width: 100%;
-    padding: 20px;
     height: 100vh;
     overflow: auto;
+
+    .intro-text {
+        text-align: center;
+        padding: 20px;
+        background-color: $color-secondary;
+        color: $color-black;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+
+        h2 {
+            font-size: 20px;
+            font-family: "Edu NSW ACT Foundation", cursive;
+        }
+
+        p {
+            color: $color-black;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        &__span {
+            border-bottom: 4px solid $color-tertiary;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
     .main-container {
         width: 80%;
         height: auto;
+
+        .intro-text {
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+        }
     }
 }
