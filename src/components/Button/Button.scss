@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+
+.button {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 18px;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: $color-secondary;
+    border: none;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $color-tertiary;
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .button {
+        width: 25%;
+    }
+}

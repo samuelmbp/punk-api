@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import beers from "../../data/beers";
 import "./BeerInfo.scss";
+import Button from "../Button/Button";
 
 //TODO: Create a BeerInfo props and pass the beers as props.
 
@@ -41,6 +42,9 @@ const BeerInfo = () => {
                 </p>
                 <br />
                 {/* TODO: Add a button */}
+                <Link to={"/"}>
+                    <Button label="Back to Beer List" />
+                </Link>
             </div>
         </section>
     );
