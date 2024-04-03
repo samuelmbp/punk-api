@@ -1,0 +1,69 @@
+@use "../../styles/variables" as *;
+
+.beer-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: $color-light-gray;
+    margin: 0 12px;
+
+    &__image {
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+        border-radius: 12px;
+        padding: 50px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: $color-primary;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 4px rgba($color: $color-black, $alpha: 0.6);
+
+        .card__title {
+            color: $color-secondary;
+            font-family: "Edu NSW ACT Foundation", cursive;
+        }
+
+        .card__tagline {
+            color: $color-tertiary;
+            font-style: italic;
+            border-bottom: 3px solid $color-secondary;
+            margin-top: 10px;
+        }
+
+        .card__description {
+            margin-top: 12px;
+        }
+
+        .highlight {
+            display: inline-block;
+            margin-top: 10px;
+            color: $color-tertiary;
+            border-bottom: 3px solid $color-secondary;
+        }
+
+        .ingredients__heading {
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .beer-info {
+        background-color: beige;
+        flex-direction: row;
+        padding: 85px;
+        margin: 0;
+
+        &__card {
+            padding: 22px;
+        }
+    }
+}

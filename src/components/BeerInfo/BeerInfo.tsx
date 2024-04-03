@@ -24,8 +24,22 @@ const BeerInfo = () => {
                 <h2 className="card__title">{beer.name}</h2>
                 <span className="card__tagline">#{beer.tagline} </span>
                 <p className="card__description">{beer.description}</p>
-                <p>First Brewed: {beer.first_brewed}</p>
-
+                <p>
+                    <span className="highlight">First Brewed:</span>{" "}
+                    {beer.first_brewed}
+                </p>
+                <p>
+                    <span className="highlight">Beer PH:</span> {beer.ph}
+                </p>{" "}
+                <p>
+                    <span className="highlight">Food Pairing:</span>{" "}
+                    {beer.food_pairing.join(", ")}
+                </p>
+                <p>
+                    <span className="highlight">Brewers Tips:</span>{" "}
+                    {beer.brewers_tips}
+                </p>
+                <br />
                 {/* TODO: Add a button */}
             </div>
         </section>
