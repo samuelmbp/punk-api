@@ -18,9 +18,7 @@ const BeerInfo = () => {
 
     return (
         <section className="beer-info">
-            {/* <div className="beer-info__image-container"> */}
             <img src={beer.image_url} alt="" className="beer-info__image" />
-            {/* </div> */}
             <div className="beer-info__card">
                 <h2 className="card__title">{beer.name}</h2>
                 <span className="card__tagline">#{beer.tagline} </span>
@@ -41,7 +39,6 @@ const BeerInfo = () => {
                     {beer.brewers_tips}
                 </p>
                 <br />
-                {/* TODO: Add a button */}
                 <Link to={"/"}>
                     <Button label="Back to Beer List" />
                 </Link>
