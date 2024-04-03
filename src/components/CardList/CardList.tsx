@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Beer } from "../../types/types";
 import Card from "../Card/Card";
 import "./CardList.scss";
@@ -13,13 +14,14 @@ const CardList = ({ beers }: CardListProps) => {
         <section className="cards">
             {beersWithImages &&
                 beersWithImages.map((beer) => (
-                    <Card
-                        key={beer.id}
-                        image={beer.image_url}
-                        name={beer.name}
-                        tagline={beer.tagline}
-                        description={beer.description}
-                    />
+                    <Link to={`/beer-info/${beer.id}`} key={beer.id}>
+                        <Card
+                            image={beer.image_url}
+                            name={beer.name}
+                            tagline={beer.tagline}
+                            description={beer.description}
+                        />
+                    </Link>
                 ))}
         </section>
     );
