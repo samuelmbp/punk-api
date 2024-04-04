@@ -2,6 +2,7 @@ import { FormEventHandler } from "react";
 import { FilterOptions } from "../../types/types";
 import Checkbox from "../Checkbox/Checkbox";
 import SearchBox from "../SearchBox/SearchBox";
+import logo from "../../assets/logo-icon.png";
 import "./Navbar.scss";
 
 type NavbarProps = {
@@ -32,7 +33,14 @@ const Navbar = ({
 
     return (
         <nav className="navbar-container">
-            <h1 className="navbar-logo">Punk API</h1>
+            <div className="navbar-container__logo">
+                <img
+                    className="navbar-container__logo-img"
+                    src={logo}
+                    alt="Logo"
+                />
+                <h1 className="navbar-container__logo-text">BrewDog's Beer</h1>
+            </div>
             <SearchBox
                 label="Search 🍺 by Name"
                 searchTerm={searchTerm}

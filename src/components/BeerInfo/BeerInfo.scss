@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     color: $color-light-gray;
-    background-color: rgba($color: $color-secondary, $alpha: 0.6);
+    background-color: $color-secondary;
     padding: 20px;
 
     &__image {
