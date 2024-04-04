@@ -11,15 +11,10 @@
 
 @media screen and (min-width: $tablet-breakpoint) {
     .cards {
-        // display: grid;
-        // grid-template-columns: repeat(2, 1fr);
-        // grid-template-rows: repeat(3, 30vw);
-        // gap: 10px;
         flex-direction: row;
         flex-wrap: wrap;
 
         .card {
-            // width: 350px;
             height: 600px;
 
             &-info {

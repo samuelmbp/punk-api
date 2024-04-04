@@ -1,14 +1,14 @@
-import beers from "../../data/beers";
-import { FilterOptions } from "../../types/types";
+import { Beer, FilterOptions } from "../../types/types";
 import CardList from "../CardList/CardList";
 import "./Main.scss";
 
 type MainProps = {
+    beers: Beer[];
     searchTerm: string;
     filterOptions: FilterOptions;
 };
 
-const Main = ({ searchTerm, filterOptions }: MainProps) => {
+const Main = ({ beers, searchTerm, filterOptions }: MainProps) => {
     const filteredBeers = beers.filter((beer) => {
         const matchesSearchTerm = beer.name
             .toLowerCase()
@@ -32,7 +32,9 @@ const Main = ({ searchTerm, filterOptions }: MainProps) => {
     return (
         <main className="main-container">
             <div className="intro-text">
-                <h2 className="intro-text__heading">Welcome to the BrewDog’s Beer Collection!</h2>
+                <h2 className="intro-text__heading">
+                    Welcome to the BrewDog’s Beer Collection!
+                </h2>
                 <p className="intro-text__description">
                     Explore the{" "}
                     <span className="intro-text__span">

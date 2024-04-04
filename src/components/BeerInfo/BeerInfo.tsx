@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import beers from "../../data/beers";
 import "./BeerInfo.scss";
 import Button from "../Button/Button";
+import { Beer } from "../../types/types";
 
-//TODO: Create a BeerInfo props and pass the beers as props.
+type BeerInfoProps = {
+    beers: Beer[];
+};
 
-const BeerInfo = () => {
+const BeerInfo = ({ beers }: BeerInfoProps) => {
     const { id } = useParams<{ id: string }>();
     if (!id) return;
 

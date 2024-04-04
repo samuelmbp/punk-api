@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { FilterOptions } from "./types/types";
 import { Route, Routes } from "react-router-dom";
 import BeerInfo from "./components/BeerInfo/BeerInfo";
+import beers from "./data/beers";
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState<string>("");
@@ -34,13 +35,17 @@ const App = () => {
                                 }
                             />
                             <Main
+                                beers={beers}
                                 searchTerm={searchTerm}
                                 filterOptions={filterOptions}
                             />
                         </>
                     }
                 />
-                <Route path="/beer-info/:id" element={<BeerInfo />} />
+                <Route
+                    path="/beer-info/:id"
+                    element={<BeerInfo beers={beers} />}
+                />
             </Routes>
         </div>
     );
