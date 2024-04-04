@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+import BeerInfo from "./components/BeerInfo/BeerInfo";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
-import { FilterOptions } from "./types/types";
-import { Route, Routes } from "react-router-dom";
-import BeerInfo from "./components/BeerInfo/BeerInfo";
 import beers from "./data/beers";
+import { FilterOptions } from "./types/types";
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState<string>("");
