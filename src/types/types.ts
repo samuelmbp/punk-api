@@ -1,25 +1,25 @@
 export type Beer = {
-    id: number;
-    name: string;
-    tagline: string;
-    first_brewed: string;
-    description: string;
-    image_url: string;
-    abv: number;
-    ibu: number;
-    target_fg: number;
-    target_og: number;
-    ebc: number;
-    srm: number;
-    ph: number;
-    attenuation_level: number;
+    id: number | null;
+    name: string | null;
+    tagline: string | null;
+    first_brewed: string | null;
+    description: string | null;
+    image_url: string | null;
+    abv: number | null;
+    ibu: number | null;
+    target_fg: number | null;
+    target_og: number | null;
+    ebc: number | null;
+    srm: number | null;
+    ph: number | null;
+    attenuation_level: number | null;
     volume: Volume;
     boil_volume: Volume;
     method: Method;
     ingredients: Ingredients;
-    food_pairing: string[];
-    brewers_tips: string;
-    contributed_by: string;
+    food_pairing: string[] | null;
+    brewers_tips: string | null;
+    contributed_by: string | null;
 };
 
 export type FilterOptions = {
@@ -29,39 +29,39 @@ export type FilterOptions = {
 };
 
 type Ingredients = {
-    malt: Malt[];
-    hops: Hop[];
-    yeast: string;
+    malt: Malt[] | null;
+    hops: Hop[] | null;
+    yeast: string | null;
 };
 
 type Hop = {
-    name: string;
-    amount: Volume;
-    add: string;
-    attribute: string;
+    name: string | null;
+    amount: Volume | null;
+    add: string | null;
+    attribute: string | null;
 };
 
 type Malt = {
-    name: string;
-    amount: Volume;
+    name: string | null;
+    amount: Volume | null;
 };
 
 type Method = {
-    mash_temp: MashTemp[];
-    fermentation: Fermentation;
-    twist?: string;
+    mash_temp: MashTemp[] | null;
+    fermentation: Fermentation | null;
+    twist?: string | null;
 };
 
 type Fermentation = {
-    temp: Volume;
+    temp: Volume | null;
 };
 
 type MashTemp = {
-    temp: Volume;
-    duration: number;
+    temp: Volume | null;
+    duration: number | null;
 };
 
 type Volume = {
-    value: number;
-    unit: string;
+    value: number | null;
+    unit: string | null;
 };

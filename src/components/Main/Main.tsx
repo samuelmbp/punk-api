@@ -10,17 +10,19 @@ type MainProps = {
 
 const Main = ({ beers, searchTerm, filterOptions }: MainProps) => {
     const filteredBeers = beers.filter((beer) => {
-        const matchesSearchTerm = beer.name
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase());
+        const matchesSearchTerm =
+            beer.name &&
+            beer.name.toLowerCase().includes(searchTerm.toLowerCase());
 
-        const passesAbvFilter = !filterOptions.abv || beer.abv > 6;
+        const passesAbvFilter =
+            !filterOptions.abv || (beer.abv && beer.abv > 6);
 
         const passesBrewedBefore2010Filter =
             !filterOptions.brewedBefore2010 ||
-            parseInt(beer.first_brewed.split("/")[1]) < 2010;
+            (beer.first_brewed &&
+                parseInt(beer.first_brewed.split("/")[1]) < 2010);
 
-        const passesPhFilter = !filterOptions.ph || beer.ph < 4;
+        const passesPhFilter = !filterOptions.ph || (beer.ph && beer.ph < 4);
 
         return (
             matchesSearchTerm &&

@@ -8,7 +8,7 @@ To run this ticket tracker application locally, follow these steps:
 -   git clone `https://github.com/samuelmbp/punk-api`
 -   Open the project directory in your code editor
 -   Run `npm install` in the root folder
--   Run `npm run dev` and open the browser to `http://localhost:5173/`
+-   Run `npm run dev` and open the browser to `http://localhost:5173/punk-api`
 -   Run tests `npm run test`
 
 ## Technologies Used

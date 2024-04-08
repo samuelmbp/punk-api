@@ -1,4 +1,6 @@
 {
+    "homepage": "https://samuelmbp.github.io/punk-api",
+    "author": "Samuel Raducan",
     "name": "punk-api",
     "private": true,
     "version": "0.0.0",

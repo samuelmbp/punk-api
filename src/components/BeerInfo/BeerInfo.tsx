@@ -20,7 +20,9 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
 
     return (
         <section className="beer-info">
-            <img src={beer.image_url} alt="" className="beer-info__image" />
+            {beer.image_url && (
+                <img src={beer.image_url} alt="" className="beer-info__image" />
+            )}
             <div className="beer-info__card">
                 <h2 className="card__title">{beer.name}</h2>
                 <span className="card__tagline">#{beer.tagline} </span>
@@ -32,10 +34,12 @@ const BeerInfo = ({ beers }: BeerInfoProps) => {
                 <p>
                     <span className="highlight">Beer PH:</span> {beer.ph}
                 </p>{" "}
-                <p>
-                    <span className="highlight">Food Pairing:</span>{" "}
-                    {beer.food_pairing.join(", ")}
-                </p>
+                {beer.food_pairing && (
+                    <p>
+                        <span className="highlight">Food Pairing:</span>{" "}
+                        {beer.food_pairing.join(", ")}
+                    </p>
+                )}
                 <p>
                     <span className="highlight">Brewers Tips:</span>{" "}
                     {beer.brewers_tips}
